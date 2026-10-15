@@ -16,7 +16,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  KERNEL_SOURCE: https://github.com/ZhanfgBuild/kernel_oneplus_sdm845
+  KERNEL_SOURCE: https://github.com/rglyhhf/kernel_oneplus_sdm845
   KERNEL_BRANCH: master
   DEFCONFIG: vendor/enchilada_defconfig
   MODE: ${{ inputs.mode }}
@@ -160,7 +160,7 @@ jobs:
           DTBO_DIR=out/arch/arm64/boot/dts/qcom
           mapfile -t DTBO_FILES < <(
             find "${DTBO_DIR}" -type f \
-              \( -name 'fajita*.dtbo' -o -name 'sdm845*overlay.dtbo' \) \
+              \( -name 'enchilada*.dtbo' -o -name 'fajita*.dtbo' -o -name 'sdm845*overlay.dtbo' \) \
               -print | sort
           )
           [ "${#DTBO_FILES[@]}" -gt 0 ] || { echo "::error::No compiled DTBO files found"; exit 1; }
