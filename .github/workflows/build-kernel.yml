@@ -239,8 +239,8 @@ jobs:
           do.systemless=0
           do.cleanup=1
           do.cleanuponabort=0
-          device.name1=enchilada
-          device.name2=OnePlus6
+          device.name1=fajita
+          device.name2=OnePlus6T
           device.name3=
           supported.versions=
           supported.patchlevels=
